@@ -35,7 +35,7 @@ resource "netlify_deploy_key" "key" {}
 
 # Define your site
 resource "netlify_site" "main" {
-  name = "mike_tf_test_site"
+  name = "mike_tf_test_site_two"
 
   repo {
     deploy_key_id = "${netlify_deploy_key.key.id}"
