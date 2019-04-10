@@ -13,7 +13,7 @@ resource "netlify_site" "main" {
   repo {
     deploy_key_id = "${netlify_deploy_key.key.id}"
     provider = "github"
-    repo_path = "mnomitch/tf_test"
+    repo_path = "mikenomitch/tf_test"
     repo_branch = "master"
   }
 }
