@@ -1,3 +1,15 @@
+terraform {
+  backend "remote" {
+    hostname = "tfe-zone-c015621d.ngrok.io"
+    organization = "local_tfe"
+    token = "hTY4H350YiKdYw.atlasv1.CczZ94pAglrze6RLa7wVEY1Wm9NWYryOTJcusJEkfaawDBSsfzahTIbwUS2xEfE0Oto"
+
+    workspaces {
+      name = "tf_test"
+    }
+  }
+}
+
 // configure the github provider
 provider "github" {
   organization = "mikenomitch"
@@ -35,7 +47,7 @@ resource "netlify_deploy_key" "key" {}
 
 # Define your site
 resource "netlify_site" "main" {
-  name = "mike_tf_test_site_four_c"
+  name = "mike_tf_test_site_four_d"
 
   repo {
     deploy_key_id = "${netlify_deploy_key.key.id}"
