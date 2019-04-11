@@ -15,7 +15,7 @@ resource "github_repository_deploy_key" "key" {
 resource "github_repository_webhook" "main" {
   repository = "mikenomitch/tf_test"
   name       = "web"
-  events     = ["delete", "push", "pull_request"]
+  events     = ["pull_request"]
 
   configuration {
     content_type = "json"
